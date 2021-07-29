@@ -1,0 +1,49 @@
+ !DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #image1 {
+      position:absolute;
+      top: 0px;
+      left: 0px;
+      height:25%;
+      width:25%;
+    }
+
+    #image2 {
+      position:absolute;
+      top: 25px;
+      left: -100px;
+      height: 25%;
+      width:25%;
+    }
+  </style>
+</head>
+
+<body> 
+  <div class="image">
+  <img src="./image1.jpeg" id="image1">
+  <img src="./image2.jpeg" id="image2">
+</div>
+<h6>Image stacking</h6>
+  <script>
+    var x = document.getElementById('image1');
+    var y = document.getElementById('image2');
+
+    x.addEventListener('click', function () {
+      x.style.zIndex = 1;
+      y.style.zIndex = 0;
+    });
+    y.addEventListener('click', function () {
+      y.style.zIndex = 1;
+      x.style.zIndex = 0;
+    });
+
+  </script>
+</body>
+
+</html>

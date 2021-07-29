@@ -1,0 +1,28 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Drag and Drop</title>
+</head>
+<style type="text/css">
+#paragraph{
+	color:red;
+}
+</style>
+<body>
+<div id="paragraph"> This is a paragraph .You can add and clear content in this paragraph</div>
+<button id="btn1" onclick="add('paragraph')">add</button>
+<button id="btn2" onclick="clr('paragraph')">clear</button>
+<script type="text/javascript">
+	 function add (x){
+var z=document.getElementById(x).innerHTML;
+var y=prompt("Enter the additional content");
+document.getElementById(x).innerHTML=z+" "+y;
+}
+	
+	
+	function clr(x){
+document.getElementById(x).innerHTML=null;
+}
+</script>
+</body>
+</html>
